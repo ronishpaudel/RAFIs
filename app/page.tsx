@@ -18,7 +18,7 @@ const Page = () => {
       <HeroSection />
       <Products />
       <Advantages />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Footer />
     </div>
   );
