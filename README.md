@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Shop Healthy, Stay Happy
 
-## Getting Started
+## About RAFIs
 
-First, run the development server:
+RAFIs is located in the heart of Nepalgunj City, Nepal. We are dedicated to providing high-quality food products while also being actively involved in agriculture. Our mission is to offer healthy food options and promote a lifestyle centered around wellness and nutrition.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Our Mission
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+At RAFIs, we aim to foster a healthier community by:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Providing Quality Food Products**: We source and offer a range of nutritious food items to support healthy living.
+- **Promoting Healthy Living**: Our focus is on encouraging individuals and families to make informed choices about their diet and overall wellbeing.
+- **Building a Community**: We work closely with businesses, producers, bakers, farmers, and consumers to create a network of stakeholders who are passionate about health and wellness.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Our Vision
 
-## Learn More
+We envision a community where:
 
-To learn more about Next.js, take a look at the following resources:
+- **Holistic Wellbeing**: People are aware of and actively pursue the cohesive wellbeing of themselves, their communities, and nature.
+- **Sustainable Practices**: Our agricultural and business practices contribute to a sustainable environment and healthier living conditions.
+- **Collaborative Efforts**: Through collaboration and shared values, we work towards a healthier future for all.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Why Choose Us?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Quality Assurance**: We prioritize quality in every product we offer.
+- **Healthy Choices**: Our products are designed to meet the highest standards of nutrition and health.
+- **Community Focused**: We are committed to building a supportive network of stakeholders who share our vision of health and wellness.
 
-## Deploy on Vercel
+## Contact Us
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For more information, inquiries, or to become a part of our community, please reach out to us:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Email**: [contact@rafisnepal.com](mailto:contact@rafisnepal.com)
+- **Phone**: +977-9801222762, +977-9801222763
+- **Address**: Nepalgunj-05, Banke, Nepal
+- **Website**: [www.rafisnepal.com](https://www.rafisnepal.com)
+
+Connect with us on social media:
+
+- **Facebook**: [regronepal](https://www.facebook.com/regronepal)
+- **Instagram**: [regronepal](https://www.instagram.com/regronepal)
+- **Twitter**: [regronepal](https://twitter.com/regronepal)
+
+Thank you for choosing RAFIs. Together, let's shop healthy and stay happy!
