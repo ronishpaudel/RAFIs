@@ -40,10 +40,9 @@ export function ProblemsSection() {
 
   return (
     <div
-      className={`py-12 ${
-        theme === "dark"
-          ? "bg-gray-950 text-gray-100"
-          : "bg-gray-50 text-gray-900"
+      className={`py-12 
+          dark:bg-gray-950 dark:text-gray-100
+          bg-gray-50 text-gray-900
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
