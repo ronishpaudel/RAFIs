@@ -23,7 +23,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
     open: { opacity: 1, y: 0 },
   };
 
-  const menuItems: string[] = ["About", "Products", "Advantages", "Contact"];
+  const menuItems: string[] = ["About", "Products", "Contact"];
 
   const productCategories: string[] = ["Flour", "Pickles"];
 
@@ -112,7 +112,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                     </AnimatePresence>
                   </div>
                 ) : (
-                  <NavLink href={`#${item.toLowerCase()}`}>{item}</NavLink>
+                  <NavLink href={`/${item.toLowerCase()}`}>{item}</NavLink>
                 )}
               </motion.div>
             ))}
