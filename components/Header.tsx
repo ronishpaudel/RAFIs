@@ -64,7 +64,7 @@ export function Header() {
               </AnimatePresence>
             </div>
             <NavLink href="#advantages">Advantages</NavLink>
-            <NavLink href="/contact-us">Contact</NavLink>
+            <NavLink href="/contact">Contact</NavLink>
           </nav>
           <div className="flex items-center space-x-4">
             <ModeToggle />
