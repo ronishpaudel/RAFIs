@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+import { Header } from "@/components/Header";
 import Image from "next/image";
 
 export default function page() {
@@ -59,6 +61,7 @@ export default function page() {
       id="products"
       className="py-16 bg-gray-100 dark:bg-black transition-colors duration-200"
     >
+      <Header />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-semibold mb-6 text-gray-800 dark:text-gray-100">
           Our Products
@@ -114,6 +117,7 @@ export default function page() {
           ))}
         </div>
       </div>
+      <Footer />
     </section>
   );
 }
