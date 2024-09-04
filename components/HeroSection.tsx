@@ -14,14 +14,14 @@ export function HeroSection() {
           </p>
           <a
             href="/products"
-            className="inline-block text-white bg-green-600 px-6 py-3 rounded-full font-semibold hover:bg-green-100 transition duration-300 text-sm sm:text-base"
+            className="inline-block text-green-600 bg-white px-6 py-3 rounded-full font-semibold hover:bg-green-100 transition duration-300 text-sm sm:text-base"
           >
             Explore Our Products
           </a>
         </div>
       </div>
       <div className="absolute inset-0 bg-black opacity-30 z-10"></div>
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <Image
           src="/static/img/veggie.webp"
           alt="Vibrant Vegetables in Market"
@@ -30,7 +30,7 @@ export function HeroSection() {
           className="object-center"
           priority
         />
-      </div>
+      </div> */}
       <div className="absolute inset-0 backdrop-blur-[3px] z-0"></div>
     </section>
   );
