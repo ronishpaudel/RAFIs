@@ -37,7 +37,7 @@ export function Header() {
               onMouseLeave={() => setIsProductsOpen(false)}
             >
               <div className="flex items-center space-x-1">
-                <NavLink href="/#products">Products</NavLink>
+                <NavLink href="/products">Products</NavLink>
                 <ChevronDown className="h-4 w-4" />
               </div>
               <AnimatePresence>
@@ -64,7 +64,7 @@ export function Header() {
                 )}
               </AnimatePresence>
             </div>
-            <NavLink href="#advantages">Advantages</NavLink>
+            <NavLink href="/advantages">Advantages</NavLink>
             <NavLink href="/contact">Contact</NavLink>
           </nav>
           <div className="flex items-center space-x-4">
