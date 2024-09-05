@@ -112,7 +112,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                     </AnimatePresence>
                   </div>
                 ) : (
-                  <NavLink href={`${item.toLowerCase()}`}>{item}</NavLink>
+                  <NavLink href={`/${item.toLowerCase()}`}>{item}</NavLink>
                 )}
               </motion.div>
             ))}
