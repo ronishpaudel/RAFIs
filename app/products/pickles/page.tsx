@@ -4,14 +4,14 @@ import Footer from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Clock, Sparkles } from "lucide-react";
+import { Clock, Sparkles, ImageIcon } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
 const pickles = [
   {
     name: "Chicken Pickle (कुखुराको मासुको अचार)",
-    image: "/static/img/chicken-pickle.png",
+    image: "",
     status: "available",
   },
   {
@@ -31,36 +31,32 @@ const pickles = [
   },
   {
     name: "Green Chilli Pickle (खुर्सानीको अचार)",
-    image: "/static/img/green-chili-pickle.png",
+    image: "",
     status: "available",
   },
   {
     name: "Garlic Pickle (लसुनको अचार)",
-    image: "/static/img/garlic-pickle.png",
+    image: "",
     status: "upcoming",
   },
   {
     name: "Garlic & Szechuan Dry Pickle (लसुन र टिमुरको छोप)",
-    image: "/static/img/garlic-szechuan-pickle.png",
+    image: "",
     status: "upcoming",
   },
   {
     name: "Dried Fish & Szechuan Dry Pickle (सिध्रा र टिमुरको छोप)",
-    image: "/static/img/dried-fish-szechuan-pickle.png",
+    image: "",
     status: "coming-soon",
   },
   {
     name: "Mushroom Pickle (च्याउको अचार)",
-    image: "/static/img/mushroom-pickle.png",
+    image: "",
     status: "coming-soon",
   },
 ];
 
 export default function Page() {
-  const handleSearch = (query: string) => {
-    console.log("Search query:", query);
-  };
-
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-black py-10">
       <Header />
@@ -75,13 +71,22 @@ export default function Page() {
               className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer"
             >
               <div className="relative h-64 bg-gradient-radial from-amber-100 to-transparent dark:from-amber-950 dark:to-transparent overflow-hidden">
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-contain"
-                />
+                {product.image ? (
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-contain"
+                  />
+                ) : (
+                  <div className="flex flex-col items-center justify-center w-full h-full text-gray-400 dark:text-white">
+                    <ImageIcon className="w-24 h-24 mb-2" />
+                    <p className="text-sm font-medium text-center">
+                      No Image Available
+                    </p>
+                  </div>
+                )}
                 {product.status !== "available" && (
                   <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
                     <Badge
