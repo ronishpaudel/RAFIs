@@ -1,5 +1,3 @@
-"use client";
-
 import { Menu, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -8,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { MobileMenu } from "./MobileMenu";
 import { motion, AnimatePresence } from "framer-motion";
 import { ModeToggle } from "@/utils/ThemeToggle";
+import Image from "next/image";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,18 +16,20 @@ export function Header() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="w-full bg-background/80 backdrop-blur-sm border-b sticky top-0 z-50 transition-colors duration-300">
+    <header className="w-full bg-background/80 backdrop-blur-sm border-b sticky top-0 z-50 transition-colors duration-300 ">
       <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           <div
-            className="flex items-center cursor-pointer"
+            className="flex items-center cursor-pointer max-w-[125px] w-full h-20"
             onClick={() => push("/")}
           >
-            <span className="text-2xl font-bold text-primary dark:text-green-400">
-              Regros
-            </span>
+            <img
+              src="/static/img/Rafis.png"
+              alt="logo"
+              className="w-full object-cover mb-6 dark:invert"
+            />
           </div>
-          <nav className="hidden md:flex space-x-6  p-2 rounded-lg">
+          <nav className="hidden md:flex space-x-6 p-2 rounded-lg">
             <NavLink href="/about">About</NavLink>
             <div
               className="relative group"
