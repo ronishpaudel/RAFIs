@@ -13,7 +13,7 @@ export default function Footer() {
                 <img
                   src="/static/img/footer.png"
                   alt="Rafis Logo"
-                  className="absolute top-0 left-0 w-full h-full object-contain"
+                  className="absolute top-0 left-0 w-full h-full object-contain dark:invert"
                 />
               </div>
             </div>
@@ -29,7 +29,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links Section */}
           <div className="text-center md:text-left">
             <h3 className="text-xl font-semibold mb-4 text-green-700 dark:text-green-300">
               Quick Links
@@ -37,7 +36,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#about"
+                  href="/about"
                   className="hover:text-green-500 dark:hover:text-green-400 transition duration-300"
                 >
                   About Us
@@ -45,7 +44,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#products"
+                  href="/products"
                   className="hover:text-green-500 dark:hover:text-green-400 transition duration-300"
                 >
                   Our Products
@@ -53,7 +52,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#advantages"
+                  href="/advantages"
                   className="hover:text-green-500 dark:hover:text-green-400 transition duration-300"
                 >
                   Health Benefits
@@ -62,7 +61,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Connect With Us Section */}
           <div className="text-center md:text-left">
             <h3 className="text-xl font-semibold mb-4 text-green-700 dark:text-green-300">
               Connect With Us
