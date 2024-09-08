@@ -1,26 +1,19 @@
 import React from "react";
-import { Facebook, Instagram } from "lucide-react";
+import { Facebook, Instagram, Youtube } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="bg-green-100 dark:bg-green-800 text-green-800 dark:text-green-100 py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {/* Logo Section */}
           <div className="flex flex-col items-center md:items-start">
-            <div className="w-full max-w-[300px] mb-4">
-              <div className="relative" style={{ paddingBottom: "43.20%" }}>
-                <img
-                  src="/static/img/footer.png"
-                  alt="Rafis Logo"
-                  className="absolute top-0 left-0 w-full h-full object-contain dark:invert"
-                />
-              </div>
-            </div>
-            <p className="text-lg font-semibold mb-2 text-green-700 dark:text-green-300">
-              Shop Healthy, Stay Happy
-            </p>
-            <p className="text-green-600 dark:text-green-200 text-sm mb-4 text-center md:text-left">
+            <img
+              src="/static/img/footer.png"
+              alt="Rafis Logo"
+              className="dark:invert w-full max-w-[300px]  "
+            />
+
+            <p className="mt-4 text-green-600 dark:text-green-200 text-sm mb-4 text-center md:text-left">
               RAFIs, located in Nepalgunj City, offers quality food products and
               promotes healthy living through our involvement in agriculture.
             </p>
@@ -80,6 +73,13 @@ export default function Footer() {
               >
                 <Instagram className="h-6 w-6" />
               </a>
+              <a
+                href="https://www.youtube.com/regronepal"
+                className="text-green-600 hover:text-green-400 dark:text-green-300 dark:hover:text-green-100 transition duration-300"
+                aria-label="YouTube"
+              >
+                <Youtube className="h-6 w-6" />
+              </a>
             </div>
             <p className="mt-4">
               Email:{" "}
@@ -112,9 +112,13 @@ export default function Footer() {
             &copy; 2024 Regmi Agro & Food Industries Pvt. Ltd. (regro). All
             rights reserved.
           </p>
-          <p className="text-sm mt-2 text-green-600 dark:text-green-300">
-            Technical Partner: TechnoPoets Pvt. Ltd.
-          </p>
+          <div className="text-sm mt-2 text-green-600 dark:text-green-300 ">
+            Technical Partner:
+            <span className="hover:underline cursor-pointer">
+              {" "}
+              TechnoPoets Pvt. Ltd.
+            </span>
+          </div>
         </div>
       </div>
     </footer>
