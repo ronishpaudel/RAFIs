@@ -56,17 +56,18 @@ const AboutPage: React.FC = () => {
                 Eat Healthy, Stay Healthy
               </h2>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                RAFIs, also known as Regro, is situated in the central location
-                of Nepalgunj City. We provide quality food products and have
-                involvement in Agriculture as well. Our aim is to provide
-                healthy food options and encourage healthy living by building a
-                community of conscious and passionate stakeholders.
+                Regmi Agro & Food Industries Pvt. Ltd. (regro) is a growing food
+                production company, which is dedicated to delivering hygienic,
+                nutritious, delicious, and cost effective products to consumers
+                all over Nepal.
               </p>
               <p className="text-gray-600 dark:text-gray-300">
-                We focus on the cohesive wellbeing of oneself, communities, and
-                nature in a holistic manner. Our stakeholders include
-                businesses, producers, bakers, farmers, and consumers who are
-                all committed to this vision.
+                We are committed to sustainable practices and innovative
+                solutions, with the source of the finest ingredients to create a
+                diverse range of food products that cater to the evolving tastes
+                and needs of our customers. Our mission is to enhance the
+                well-being of communities by providing safe, affordable, and
+                flavorful food options that contribute to a healthier lifestyle.
               </p>
             </CardContent>
           </Card>
@@ -77,9 +78,9 @@ const AboutPage: React.FC = () => {
                   Our Mission
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  To provide the highest quality, healthiest food options to our
-                  community while supporting local agriculture and sustainable
-                  practices.
+                  To enhance the well-being of communities by providing safe,
+                  affordable, and flavorful food options that contribute to a
+                  healthier lifestyle.
                 </p>
               </CardContent>
             </Card>

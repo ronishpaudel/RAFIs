@@ -26,7 +26,8 @@ export function Header() {
             <img
               src="/static/img/Rafis.png"
               alt="logo"
-              className="w-full object-cover mb-6 dark:invert"
+              className="w-full object-cover mb-6 
+  dark:brightness-150 dark:drop-shadow-md"
             />
           </div>
           <nav className="hidden md:flex space-x-6 p-2 rounded-lg">

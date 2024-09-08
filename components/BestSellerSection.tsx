@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 
-export default function Products() {
+export default function BestSeller() {
   const [sliderRef, setSliderRef] = useState<Slider | null>(null);
 
   const settings = {
@@ -38,7 +38,7 @@ export default function Products() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-semibold mb-6 text-gray-800 dark:text-gray-100">
-          Featured Products
+          Best Seller
         </h2>
         <div className="relative px-8">
           <Slider ref={(slider) => setSliderRef(slider)} {...settings}>
@@ -54,7 +54,7 @@ export default function Products() {
                 </div>
                 <div className="p-4">
                   <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
-                    Chokar Yukta Chakki Pitho
+                    Chokar Yukta Chakki Aata
                   </h4>
                   <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
                     Traditional Nepalese rice flour
@@ -114,10 +114,10 @@ export default function Products() {
                 </div>
                 <div className="p-4">
                   <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
-                    Khursani ko Ledo Achar
+                    Chicken Achar
                   </h4>
                   <p className="text-sm text-gray-600 dark:text-gray-300 mt-2">
-                    Fiery green chili paste pickle
+                    Chicken Pickle
                   </p>
                 </div>
               </div>

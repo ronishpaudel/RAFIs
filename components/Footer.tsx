@@ -7,15 +7,13 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div className="flex flex-col items-center md:items-start">
-            <img
-              src="/static/img/footer.png"
-              alt="Rafis Logo"
-              className="dark:invert w-full max-w-[300px]  "
-            />
+            <img src="/static/img/footer.png" alt="Rafis Logo" />
 
             <p className="mt-4 text-green-600 dark:text-green-200 text-sm mb-4 text-center md:text-left">
-              RAFIs, located in Nepalgunj City, offers quality food products and
-              promotes healthy living through our involvement in agriculture.
+              Regro's are committed to sustainable practices and innovative
+              solutions, with the source of the finest ingredients to create a
+              diverse range of food products that cater to the evolving tastes
+              and needs of our customers.
             </p>
             <p className="text-sm text-green-700 dark:text-green-300">
               Nepalgunj City, Nepal
@@ -114,10 +112,13 @@ export default function Footer() {
           </p>
           <div className="text-sm mt-2 text-green-600 dark:text-green-300 ">
             Technical Partner:
-            <span className="hover:underline cursor-pointer">
+            <a
+              href="https://technopoets.com/"
+              className="hover:underline cursor-pointer"
+            >
               {" "}
               TechnoPoets Pvt. Ltd.
-            </span>
+            </a>
           </div>
         </div>
       </div>
