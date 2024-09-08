@@ -39,8 +39,8 @@ const AboutPage: React.FC = () => {
       <Header />
       <section className="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold text-center mb-8 text-gray-900 dark:text-gray-100">
-            About RAFIS
+          <h1 className="text-4xl font-bold text-center mb-8 text-green-500 dark:text-green-600">
+            About Regro's
           </h1>
           <div className="mb-12 relative h-64 sm:h-96 rounded-lg overflow-hidden">
             <ImageWithPlaceholder
@@ -52,8 +52,8 @@ const AboutPage: React.FC = () => {
           </div>
           <Card className="mb-8">
             <CardContent className="p-6">
-              <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">
-                Shop Healthy, Stay Happy
+              <h2 className="text-2xl font-semibold mb-4 text-green-400 dark:text-green-600">
+                Eat Healthy, Stay Healthy
               </h2>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
                 RAFIs, also known as Regro, is situated in the central location
@@ -73,7 +73,7 @@ const AboutPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <Card>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
+                <h3 className="text-xl font-semibold mb-2 text-green-500 dark:text-green-600">
                   Our Mission
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
@@ -85,7 +85,7 @@ const AboutPage: React.FC = () => {
             </Card>
             <Card>
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">
+                <h3 className="text-xl font-semibold mb-2 text-green-500 dark:text-green-600">
                   Our Vision
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
@@ -96,7 +96,7 @@ const AboutPage: React.FC = () => {
               </CardContent>
             </Card>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <div className="relative h-40 rounded-lg overflow-hidden">
               <ImageWithPlaceholder
                 src=""
@@ -121,12 +121,10 @@ const AboutPage: React.FC = () => {
                 className="object-cover"
               />
             </div>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
             <div className="relative h-40 rounded-lg overflow-hidden">
               <ImageWithPlaceholder
                 src=""
-                alt="People working happily at Regro"
+                alt="Regro agricultural involvement"
                 fill
                 className="object-cover"
               />
@@ -134,7 +132,7 @@ const AboutPage: React.FC = () => {
             <div className="relative h-40 rounded-lg overflow-hidden">
               <ImageWithPlaceholder
                 src=""
-                alt="Regro products display"
+                alt="Regro agricultural involvement"
                 fill
                 className="object-cover"
               />
