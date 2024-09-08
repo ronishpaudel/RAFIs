@@ -44,7 +44,7 @@ export default function Products() {
         <h2 className="text-3xl font-semibold mb-6 text-gray-800 dark:text-gray-100">
           Featured Products
         </h2>
-        <div className="relative">
+        <div className="relative px-8">
           <Slider ref={(slider) => setSliderRef(slider)} {...settings}>
             <div className="px-2">
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-green-600/70 cursor-pointer h-full">
@@ -129,14 +129,14 @@ export default function Products() {
           </Slider>
           <button
             onClick={() => sliderRef?.slickPrev()}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full bg-white/80 dark:bg-gray-800/80 p-2 rounded-full shadow-md z-10"
+            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-gray-800/80 p-2 rounded-full shadow-md z-10"
             aria-label="Previous product"
           >
             <ChevronLeft className="w-6 h-6 text-gray-800 dark:text-gray-200" />
           </button>
           <button
             onClick={() => sliderRef?.slickNext()}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full bg-white/80 dark:bg-gray-800/80 p-2 rounded-full shadow-md z-10"
+            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-gray-800/80 p-2 rounded-full shadow-md z-10"
             aria-label="Next product"
           >
             <ChevronRight className="w-6 h-6 text-gray-800 dark:text-gray-200" />
