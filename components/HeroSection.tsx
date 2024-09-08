@@ -6,7 +6,7 @@ export function HeroSection() {
       <div className="max-w-[1920px] w-full mx-auto px-4 sm:px-6 lg:px-8 z-20 relative ">
         <div className="max-w-3xl">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight font-poppins">
-            Shop Healthy, Stay Happy
+            Eat Healthy, Stay Healthy
           </h1>
           <p className="text-lg sm:text-xl mb-8 font-poppins">
             Discover our range of quality food products for a healthier you. We
