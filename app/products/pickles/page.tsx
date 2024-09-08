@@ -11,7 +11,7 @@ import React from "react";
 const pickles = [
   {
     name: "Chicken Pickle (कुखुराको मासुको अचार)",
-    image: "",
+    image: "/static/img/chicken.png",
     status: "available",
   },
   {
@@ -31,7 +31,7 @@ const pickles = [
   },
   {
     name: "Green Chilli Pickle (खुर्सानीको अचार)",
-    image: "",
+    image: "/static/img/green-chilli.png",
     status: "available",
   },
   {

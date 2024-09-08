@@ -7,23 +7,22 @@ import React from "react";
 
 const flourProducts = [
   {
-    name: "चोकर युक्त चक्की पिठो",
+    name: "Wheat Flour (चोकर युक्त चक्की पिठो)",
     image: "/static/img/chokar.png",
   },
   {
-    name: "चना दाल बेसन",
+    name: "Gram Flour (चना दाल बेसन)",
     image: "/static/img/chana.png",
   },
   {
-    name: "चामलको पिठो",
+    name: "Rice Flour (चामलको पिठो)",
     image: "/static/img/rice.png",
   },
   {
-    name: "केराउको पिठो (बेसन प्रयोजनको लागि)",
+    name: "Pea Flour (केराउको पिठो - बेसन प्रयोजनको लागि)",
     image: "/static/img/pea.png",
   },
 ];
-
 export default function Page() {
   return (
     <div>
