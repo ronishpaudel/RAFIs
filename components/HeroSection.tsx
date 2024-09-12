@@ -3,7 +3,7 @@ export function HeroSection() {
     <section className="relative bg-green-600 min-h-[60vh] flex items-center">
       <div className="max-w-[1920px] w-full mx-auto px-4 sm:px-6 lg:px-8 z-20 relative">
         <div className="max-w-3xl">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight font-poppins bg-gradient-to-r from-green-900 to-green-600 bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-white dark:to-gray-300">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight font-poppins bg-gradient-to-r from-green-900 to-green-950 bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-white dark:to-gray-300">
             Eat Healthy, Stay Healthy
           </h1>
           <p className="text-lg sm:text-xl mb-8 font-poppins text-gray-900 dark:text-gray-200">
