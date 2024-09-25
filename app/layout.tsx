@@ -4,6 +4,13 @@ import "leaflet/dist/leaflet.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { Inter, Playfair_Display } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -71,7 +78,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${poppins.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${poppins.variable}${inter.variable} ${playfair.variable}`}
+    >
       <body className={poppins.className}>
         <ThemeProvider
           attribute="class"

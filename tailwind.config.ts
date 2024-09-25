@@ -15,6 +15,8 @@ const config: Config = {
     extend: {
       fontFamily: {
         poppins: ["var(--font-poppins)", ...fontFamily.sans],
+        inter: ["var(--font-inter)"],
+        playfair: ["var(--font-playfair)"],
       },
       backgroundImage: {
         "custom-radial-gradient": "radial-gradient(#971197, transparent)",
