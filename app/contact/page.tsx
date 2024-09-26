@@ -2,7 +2,6 @@
 
 import Footer from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { Map } from "@/components/Map";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -46,7 +45,7 @@ export default function ContactPage() {
       setFormStatus("error");
     }
   };
-  console.log({ env: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY });
+  console.log({ env: process.env.WEB3FORMS_ACCESS_KEY });
 
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-black ">
@@ -65,7 +64,7 @@ export default function ContactPage() {
                 <input
                   type="hidden"
                   name="access_key"
-                  value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY}
+                  value={process.env.WEB3FORMS_ACCESS_KEY}
                 />
                 <div>
                   <Label htmlFor="name">Name</Label>
