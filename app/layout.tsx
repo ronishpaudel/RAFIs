@@ -84,15 +84,8 @@ export default function RootLayout({
       className={`${poppins.variable}${inter.variable} ${playfair.variable}`}
     >
       <body className={poppins.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-          <Analytics />
-        </ThemeProvider>
+        {children}
+        <Analytics />
       </body>
     </html>
   );
