@@ -6,7 +6,7 @@ export function HeroSection() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight font-poppins bg-gradient-to-r from-gray-100 to-gray-200 bg-clip-text shadow-2xl text-transparent dark:bg-gradient-to-r dark:from-white dark:to-gray-300">
             Eat Healthy, Stay Healthy
           </h1>
-          <p className="text-lg sm:text-xl mb-8 font-poppins bg-gradient-to-r from-gray-100 to-gray-200 text-transparent bg-clip-text dark:text-gray-200 shadow-2xl">
+          <p className="text-lg sm:text-xl mb-8 font-poppins bg-gradient-to-r from-gray-100 to-gray-200 text-transparent bg-clip-text dark:text-gray-200 ">
             Discover our range of quality food products for a healthier you. We
             provide quality food products and are involved in agriculture.
           </p>
