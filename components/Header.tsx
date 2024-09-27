@@ -68,17 +68,14 @@ export function Header() {
             <NavLink href="/advantages">Advantages</NavLink>
             <NavLink href="/contact">Contact</NavLink>
           </nav>
-          <div className="flex items-center space-x-4">
-            <ModeToggle />
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden"
-              onClick={toggleMenu}
-            >
-              <Menu className="h-6 w-6" />
-            </Button>
-          </div>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden"
+            onClick={toggleMenu}
+          >
+            <Menu className="h-6 w-6" />
+          </Button>
         </div>
       </div>
       {isMenuOpen && <MobileMenu isOpen={isMenuOpen} onClose={toggleMenu} />}
