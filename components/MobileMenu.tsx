@@ -3,6 +3,7 @@ import { X, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { NavLink } from "./NavLink";
 import { motion, AnimatePresence, Variants } from "framer-motion";
+import Image from "next/image";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -57,9 +58,16 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
           exit="closed"
           variants={menuVariants}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          className="fixed inset-0 bg-gradient-to-br from-primary/20 to-background backdrop-blur-lg z-50 flex flex-col"
+          className="fixed inset-0 bg-white backdrop-blur-lg z-50 flex flex-col"
         >
           <div className="flex justify-end p-4">
+            <Image
+              src="/static/img/footer.png"
+              alt="Logo"
+              className="h-20 w-auto text-center"
+              width={100}
+              height={100}
+            />
             <Button
               variant="ghost"
               size="icon"
