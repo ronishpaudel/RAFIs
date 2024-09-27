@@ -22,61 +22,61 @@ const products: { flour: Product[]; pickles: Product[] } = {
     {
       name: "Wheat Flour (चोकर युक्त चक्की पिठो)",
       image: "/static/img/chokar.png",
-      ingredientsImage: "/static/img/wheat-ingredients.png",
+      ingredientsImage: "",
       ingredients: "100% Whole Wheat",
     },
     {
       name: "Gram Flour (चना दाल बेसन)",
       image: "/static/img/chana.png",
-      ingredientsImage: "/static/img/gram-ingredients.png",
+      ingredientsImage: "",
       ingredients: "100% Ground Chickpeas",
     },
     {
       name: "Rice Flour (चामलको पिठो)",
       image: "/static/img/rice.png",
-      ingredientsImage: "/static/img/rice-ingredients.png",
+      ingredientsImage: "",
       ingredients: "100% Ground Rice",
     },
     {
       name: "Pea Flour (केराउको पिठो - बेसन प्रयोजनको लागि)",
       image: "/static/img/pea.png",
-      ingredientsImage: "/static/img/pea-ingredients.png",
+      ingredientsImage: "",
       ingredients: "100% Ground Yellow Peas",
     },
   ],
   pickles: [
     {
       name: "Chicken Pickle (कुखुराको मासुको अचार)",
-      image: "",
-      ingredientsImage: "",
+      image: "/static/img/chicken.png",
+      ingredientsImage: "/static/img/chicken-back.png",
       ingredients: "Chicken, Oil, Spices, Salt",
       status: "available",
     },
     {
       name: "Bitter Gourd Pickle (करेलाको अचार)",
       image: "/static/img/bitter-gourd-pickle.png",
-      ingredientsImage: "/static/img/bitter-gourd-ingredients.png",
+      ingredientsImage: "/static/img/karela-back.png",
       ingredients: "Bitter Gourd, Oil, Spices, Salt",
       status: "available",
     },
     {
       name: "Chicken Gizzard Pickle (कुखुराको पांग्राको अचार)",
       image: "/static/img/chicken-gizzard-pickle.png",
-      ingredientsImage: "/static/img/chicken-gizzard-ingredients.png",
+      ingredientsImage: "/static/img/gizzard-back.png",
       ingredients: "Chicken Gizzard, Oil, Spices, Salt",
       status: "available",
     },
     {
       name: "Green Chili Paste Pickle (खुर्सानीको लेदो अचार)",
       image: "/static/img/green-chili-paste-pickle.png",
-      ingredientsImage: "/static/img/green-chili-paste-ingredients.png",
+      ingredientsImage: "/static/img/chilli-back.png",
       ingredients: "Green Chili, Oil, Spices, Salt",
       status: "available",
     },
     {
       name: "Green Chilli Pickle (खुर्सानीको अचार)",
-      image: "",
-      ingredientsImage: "/static/img/green-chilli-ingredients.png",
+      image: "/static/img/green-chilli.png",
+      ingredientsImage: "/static/img/green-chilli-pickle-back.png",
       ingredients: "Green Chilli, Oil, Spices, Salt",
       status: "available",
     },
@@ -111,7 +111,7 @@ const products: { flour: Product[]; pickles: Product[] } = {
   ],
 };
 
-function ProductCard({ product }: { product: Product }) {
+export function ProductCard({ product }: { product: Product }) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
@@ -194,29 +194,29 @@ function ProductCard({ product }: { product: Product }) {
             <RotateCw className="w-6 h-6 text-gray-600 dark:text-gray-300" />
           </div>
         </Card>
-        <Card className="absolute w-full h-full backface-hidden rotate-y-180">
-          <div className="relative h-full bg-white dark:bg-gray-950 p-4">
+        <Card className="absolute w-full h-full backface-hidden rotate-y-180 overflow-hidden">
+          <div className="relative h-full">
             {product.ingredientsImage ? (
               <Image
                 src={product.ingredientsImage}
                 alt={`${product.name} ingredients`}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-contain p-4"
+                className="object-cover"
               />
             ) : (
-              <div className="flex flex-col items-center justify-center w-full h-full text-gray-400 dark:text-gray-600">
-                <ImageIcon className="w-24 h-24 mb-2" />
-                <p className="text-sm font-medium text-center">
+              <div className="flex flex-col items-center justify-center w-full h-full bg-gradient-radial from-amber-100 to-transparent dark:from-amber-900 dark:to-transparent">
+                <ImageIcon className="w-24 h-24 mb-2 text-gray-400 dark:text-gray-600" />
+                <p className="text-sm font-medium text-center text-gray-600 dark:text-gray-400">
                   No Ingredients Image Available
                 </p>
               </div>
             )}
-            <div className="absolute bottom-0 left-0 right-0 p-4 bg-white dark:bg-gray-950 bg-opacity-90 dark:bg-opacity-90">
-              <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-2 font-inter">
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent flex flex-col justify-end p-6">
+              <h4 className="text-xl font-semibold text-white mb-3 font-inter">
                 Ingredients
               </h4>
-              <p className="text-sm text-gray-600 dark:text-gray-300">
+              <p className="text-base text-gray-200 leading-relaxed">
                 {product.ingredients}
               </p>
             </div>
