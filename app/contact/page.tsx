@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Footer from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
@@ -17,7 +18,6 @@ import {
   Phone,
   PhoneIcon,
 } from "lucide-react";
-import { useState } from "react";
 
 export default function ContactPage() {
   const [formStatus, setFormStatus] = useState<
@@ -30,6 +30,12 @@ export default function ContactPage() {
 
     const formData = new FormData(e.currentTarget);
 
+    // Add the access key to the form data
+    formData.append(
+      "access_key",
+      process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || ""
+    );
+
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -39,16 +45,18 @@ export default function ContactPage() {
       if (response.ok) {
         setFormStatus("success");
       } else {
+        const errorData = await response.json();
+        console.error("Form submission error:", errorData);
         setFormStatus("error");
       }
     } catch (error) {
+      console.error("Form submission error:", error);
       setFormStatus("error");
     }
   };
-  console.log({ env: process.env.WEB3FORMS_ACCESS_KEY });
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-black ">
+    <div className="min-h-screen bg-gray-100 dark:bg-black">
       <Header />
       <section className="container mx-auto px-4 py-8 sm:px-6 lg:px-8 my-10 mb-14">
         <h1 className="text-4xl font-bold text-center mb-8 text-gray-900 dark:text-gray-100">
@@ -61,11 +69,6 @@ export default function ContactPage() {
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-4">
-                <input
-                  type="hidden"
-                  name="access_key"
-                  value={process.env.WEB3FORMS_ACCESS_KEY}
-                />
                 <div>
                   <Label htmlFor="name">Name</Label>
                   <Input id="name" name="name" required />
@@ -166,16 +169,6 @@ export default function ContactPage() {
             </CardContent>
           </Card>
         </div>
-        {/* <Card className="mt-8">
-          <CardHeader>
-            <CardTitle>Our Location</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="h-[400px] w-full">
-              <Map />
-            </div>
-          </CardContent>
-        </Card> */}
       </section>
       <Footer />
     </div>
