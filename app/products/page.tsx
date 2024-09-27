@@ -111,7 +111,7 @@ const products: { flour: Product[]; pickles: Product[] } = {
   ],
 };
 
-export function ProductCard({ product }: { product: Product }) {
+function ProductCard({ product }: { product: Product }) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
