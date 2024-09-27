@@ -66,6 +66,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               alt="Logo"
               className="h-20 w-auto text-center"
               width={100}
+              priority
               height={100}
             />
             <Button
