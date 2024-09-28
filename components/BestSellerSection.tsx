@@ -36,9 +36,9 @@ const bestSellers: Product[] = [
   {
     name: "Chicken Achar",
     description: "Chicken Pickle",
-    image: "/static/img/green-chili-paste-pickle.png",
+    image: "/static/img/chicken.png",
     ingredients: "Chicken, Oil, Spices, Salt",
-    ingredientsImage: "/static/img/chilli-back.png",
+    ingredientsImage: "/static/img/chicken-back.png",
   },
 ];
 
