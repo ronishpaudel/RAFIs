@@ -7,6 +7,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { ProblemsSection } from "@/components/ProblemSection";
 import Products from "@/components/ProductSection";
 import Testimonials from "@/components/Testimonial";
+import { WhyChooseRegro } from "@/components/WhyChooseRegro";
 import React from "react";
 
 const Page = () => {
@@ -18,6 +19,7 @@ const Page = () => {
       <ProblemsSection />
       <Advantages />
       <Products />
+      <WhyChooseRegro />
       <Testimonials />
       <Footer />
     </div>
