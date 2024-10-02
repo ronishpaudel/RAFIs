@@ -1,9 +1,23 @@
+import Image from "next/image";
+
 export function HeroSection() {
   return (
-    <section className="relative bg-green-600 min-h-[60vh] flex items-center">
+    <section className="relative h-[100vh] flex items-center overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: 'url("/static/img/banner.webp")',
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      ></div>
+
+      <div className="absolute inset-0  backdrop-blur-[2px] z-10"></div>
+
       <div className="max-w-[1920px] w-full mx-auto px-4 sm:px-6 lg:px-8 z-20 relative">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight font-poppins bg-gradient-to-r from-gray-100 to-gray-200 bg-clip-text  text-transparent dark:bg-gradient-to-r dark:from-white dark:to-gray-300">
+        <div className="max-w-3xl bg-gray-800 bg-opacity-70 rounded-lg p-4">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4  leading-normal font-poppins bg-gradient-to-r from-gray-100 to-gray-200 bg-clip-text  text-transparent dark:bg-gradient-to-r dark:from-white dark:to-gray-300">
             Eat Healthy, Stay Healthy
           </h1>
           <p className="text-lg sm:text-xl mb-8 font-poppins bg-gradient-to-r from-gray-100 to-gray-200 text-transparent bg-clip-text dark:text-gray-200 ">
@@ -18,22 +32,6 @@ export function HeroSection() {
           </a>
         </div>
       </div>
-      {/* Background image section */}
-      <div className="absolute inset-0 bg-black opacity-10 z-10 dark:opacity-20"></div>
-      {/* <div className="absolute inset-0 z-0 w-full h-full max-w-[1920px] mx-auto">
-        <Image
-          src="/static/img/banner.webp" // Ensure this is the correct path
-          alt="Vibrant Vegetables in Market"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          quality={100}
-          priority
-          className="dark:brightness-75" // Make it blend better in dark mode
-        />
-      </div> */}
-      {/* Slight backdrop blur effect for added blending */}
-      <div className="absolute inset-0 backdrop-blur-[4px] z-0"></div>
     </section>
   );
 }
