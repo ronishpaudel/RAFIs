@@ -17,7 +17,7 @@ export function Header() {
 
   return (
     <header className="w-full bg-background/80 backdrop-blur-sm border-b sticky top-0 z-50 transition-colors duration-300 ">
-      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <div className="flex items-center justify-between">
           <div
             className="flex items-center cursor-pointer max-w-[125px] w-full h-20"
@@ -30,7 +30,7 @@ export function Header() {
   dark:brightness-150 dark:drop-shadow-md"
             />
           </div>
-          <nav className="hidden md:flex space-x-6 p-2 rounded-lg">
+          <nav className="hidden md:flex space-x-6 p-2 rounded-lg text-2xl font-medium">
             <NavLink href="/about">About</NavLink>
             <div
               className="relative group"
@@ -65,6 +65,7 @@ export function Header() {
                 )}
               </AnimatePresence>
             </div>
+            <NavLink href="/terminal">Terminal</NavLink>
             <NavLink href="/advantages">Advantages</NavLink>
             <NavLink href="/contact">Contact</NavLink>
           </nav>
