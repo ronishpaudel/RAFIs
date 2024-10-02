@@ -51,7 +51,7 @@ function ProductCard({ product }: { product: Product }) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div className="px-2">
+    <div className="px-2" onMouseLeave={() => setIsFlipped(false)}>
       <div
         className="h-[400px] w-full perspective cursor-pointer group"
         onClick={() => setIsFlipped(!isFlipped)}

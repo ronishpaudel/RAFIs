@@ -46,10 +46,10 @@ function ProductCard({ product }: { product: Product }) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
-    <div className="px-2">
+    <div className="px-2" onMouseLeave={() => setIsFlipped(false)}>
       <div
         className="h-[400px] w-full perspective cursor-pointer group"
-        onClick={() => setIsFlipped(!isFlipped)}
+        onClick={() => setIsFlipped(!isFlipped)} // Flip on click
         onKeyDown={(e) => {
           if (e.key === "Enter" || e.key === " ") {
             setIsFlipped(!isFlipped);
@@ -66,6 +66,7 @@ function ProductCard({ product }: { product: Product }) {
             isFlipped ? "rotate-y-180" : ""
           }`}
         >
+          {/* Front of the card */}
           <Card className="absolute w-full h-full backface-hidden">
             <div className="relative h-full bg-gradient-radial from-amber-950 to-transparent dark:from-amber-950 dark:to-transparent">
               <Image
@@ -89,6 +90,8 @@ function ProductCard({ product }: { product: Product }) {
               <RotateCw className="w-6 h-6 text-gray-600 dark:text-gray-300" />
             </div>
           </Card>
+
+          {/* Back of the card */}
           <Card className="absolute w-full h-full backface-hidden rotate-y-180 overflow-hidden">
             <div className="relative h-full">
               {product.ingredientsImage ? (

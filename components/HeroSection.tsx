@@ -3,15 +3,7 @@ import Image from "next/image";
 export function HeroSection() {
   return (
     <section className="relative h-[100vh] flex items-center overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: 'url("/static/img/banner.webp")',
-          backgroundAttachment: "fixed",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      ></div>
+      <div className="absolute inset-0 bg-cover bg-center heroSection"></div>
 
       <div className="absolute inset-0  backdrop-blur-[2px] z-10"></div>
 

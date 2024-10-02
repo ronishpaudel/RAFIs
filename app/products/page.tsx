@@ -118,6 +118,7 @@ function ProductCard({ product }: { product: Product }) {
     <div
       className="h-[400px] w-full perspective cursor-pointer group"
       onClick={() => setIsFlipped(!isFlipped)}
+      onMouseLeave={() => setIsFlipped(false)}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
           setIsFlipped(!isFlipped);

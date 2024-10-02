@@ -108,4 +108,7 @@
 }
 .heroSection {
   background-image: url("/static/img/banner.webp");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
