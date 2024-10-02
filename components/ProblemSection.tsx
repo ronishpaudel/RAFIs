@@ -53,7 +53,7 @@ export function ProblemsSection() {
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl">
             Understanding the Risks of Poor Dietary Choices
           </p>
-          <p className="mt-4 max-w-2xl text-xl lg:mx-auto">
+          <p className="mt-3 max-w-2xl text-lg lg:mx-auto leading-5">
             Unhealthy food can have serious consequences for your body and mind.
             Here are some of the key problems associated with a poor diet.
           </p>
@@ -70,10 +70,12 @@ export function ProblemsSection() {
                 {problem.icon}
               </div>
               <div className="ml-4">
-                <dt className="text-lg leading-6 font-medium">
+                <dt className="text-lg leading-6 font-semibold">
                   {problem.title}
                 </dt>
-                <dd className="mt-2 text-base">{problem.description}</dd>
+                <dd className="mt-1 leading-5 text-base">
+                  {problem.description}
+                </dd>
               </div>
             </div>
           ))}
