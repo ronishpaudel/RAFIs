@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { NavLink } from "./NavLink";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -12,6 +13,7 @@ interface MobileMenuProps {
 
 const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const { push } = useRouter();
   const menuRef = useRef<HTMLDivElement>(null);
 
   const menuVariants: Variants = {
@@ -74,6 +76,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
               width={100}
               priority
               height={100}
+              onClick={() => push("/")}
             />
             <Button
               variant="ghost"
