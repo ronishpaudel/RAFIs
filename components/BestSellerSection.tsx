@@ -67,7 +67,7 @@ function ProductCard({ product }: { product: Product }) {
           }`}
         >
           <Card className="absolute w-full h-full backface-hidden">
-            <div className="relative h-full bg-gradient-radial from-amber-100 to-transparent dark:from-amber-900 dark:to-transparent">
+            <div className="relative h-full bg-gradient-radial from-amber-950 to-transparent dark:from-amber-950 dark:to-transparent">
               <Image
                 src={product.image}
                 alt={product.name}
@@ -107,7 +107,7 @@ function ProductCard({ product }: { product: Product }) {
                   </p>
                 </div>
               )}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent flex flex-col justify-end p-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent flex flex-col justify-end p-6">
                 <h4 className="text-xl font-semibold text-white mb-3 font-inter">
                   Ingredients
                 </h4>

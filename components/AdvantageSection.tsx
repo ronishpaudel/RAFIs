@@ -17,7 +17,7 @@ export default function Advantages() {
     <section id="advantages" className="py-16 bg-green-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-semibold mb-6 text-gray-800 dark:text-gray-100">
-          Advantages of Our Healthy Food
+          Advantages of Healthy Food
         </h2>
         <div className="flex flex-wrap -mx-4">
           {advantages.map((advantage, index) => (
