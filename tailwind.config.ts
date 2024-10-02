@@ -17,6 +17,7 @@ const config: Config = {
         poppins: ["var(--font-poppins)", ...fontFamily.sans],
         inter: ["var(--font-inter)"],
         playfair: ["var(--font-playfair)"],
+        libre: ["var(--font-libre-baskerville)"],
       },
       backgroundImage: {
         "custom-radial-gradient": "radial-gradient(#971197, transparent)",

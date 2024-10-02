@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "leaflet/dist/leaflet.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import { Poppins } from "next/font/google";
+
+import { Libre_Baskerville, Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { Inter, Playfair_Display } from "next/font/google";
 
@@ -10,6 +10,12 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
+});
+const libreBaskerville = Libre_Baskerville({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-libre-baskerville",
 });
 
 export const metadata: Metadata = {
@@ -81,7 +87,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${poppins.variable}${inter.variable} ${playfair.variable}`}
+      className={`${poppins.variable}${inter.variable} ${playfair.variable} ${libreBaskerville.variable}`}
     >
       <body className={poppins.className}>
         {children}
