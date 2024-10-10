@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export function HeroSection() {
   return (
     <section className="relative h-[100vh] flex items-center overflow-hidden">
