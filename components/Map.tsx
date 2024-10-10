@@ -2,7 +2,6 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
-// Fix the default icon issue without deleting properties
 L.Icon.Default.mergeOptions({
   iconUrl: "/leaflet-marker-icon.png",
   iconRetinaUrl: "/leaflet-marker-icon-2x.png",
