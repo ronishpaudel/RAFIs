@@ -5,8 +5,6 @@ import { NavLink } from "./NavLink";
 import { useRouter } from "next/navigation";
 import { MobileMenu } from "./MobileMenu";
 import { motion, AnimatePresence } from "framer-motion";
-import { ModeToggle } from "@/utils/ThemeToggle";
-import Image from "next/image";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
