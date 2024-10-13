@@ -10,7 +10,6 @@ import {
 } from "lucide-react";
 import Footer from "@/components/Footer";
 import { Header } from "@/components/Header";
-import FeaturedProducts from "@/components/BestSellerSection";
 
 interface Location {
   city: string;
