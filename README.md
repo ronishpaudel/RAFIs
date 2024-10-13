@@ -2,6 +2,8 @@
 
 ## About RAFIs
 
+RAFIs is located in the heart of Nepalgunj City, Nepal. We are dedicated to providing high-quality food products while also being actively involved in agriculture. Our mission is to offer healthy food options and promote a lifestyle centered around wellness and nutrition.
+
 ## Our Mission
 
 At RAFIs, we aim to foster a healthier community by:
