@@ -1,126 +1,210 @@
 import React from "react";
-import { Facebook, Instagram, Youtube } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Youtube,
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+} from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-green-100 dark:bg-green-800 text-green-800 dark:text-green-100 py-12">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          <div className="flex flex-col items-center md:items-start">
-            <img src="/static/img/footer.png" alt="Rafis Logo" />
-
-            <p className="mt-4 text-green-600 dark:text-green-200 text-sm mb-4 text-center md:text-left">
-              Regro's are committed to sustainable practices and innovative
-              solutions, with the source of the finest ingredients to create a
-              diverse range of food products that cater to the evolving tastes
-              and needs of our customers.
+    <footer className="bg-gradient-to-br from-amber-50 to-orange-100 dark:from-amber-900 dark:to-orange-950 text-amber-900 dark:text-amber-100 py-16">
+      <div className="px-4 sm:px-6 lg:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          {/* Company Overview */}
+          <div className="flex flex-col items-center md:items-start space-y-4">
+            <img
+              src="/static/img/footer.png"
+              alt="Company Logo"
+              className="h-16 w-auto"
+            />
+            <p className="text-amber-800 dark:text-amber-200 text-sm text-center md:text-left">
+              Crafting authentic flavors since 2024. We take pride in our
+              traditional recipes and modern techniques to bring you the finest
+              selection of pickles, flour products, and specialty foods.
             </p>
-            <p className="text-sm text-green-700 dark:text-green-300">
-              Nepalgunj City, Nepal
-            </p>
+            <div className="flex space-x-4 mt-4">
+              <a
+                href="https://facebook.com"
+                className="text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-100 transition-colors"
+              >
+                <Facebook className="h-6 w-6" />
+              </a>
+              <a
+                href="https://instagram.com"
+                className="text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-100 transition-colors"
+              >
+                <Instagram className="h-6 w-6" />
+              </a>
+              <a
+                href="https://youtube.com"
+                className="text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-100 transition-colors"
+              >
+                <Youtube className="h-6 w-6" />
+              </a>
+            </div>
           </div>
 
+          {/* Product Categories */}
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-semibold mb-4 text-green-700 dark:text-green-300">
-              Quick Links
+            <h3 className="text-lg font-bold mb-6 text-amber-800 dark:text-amber-200">
+              Our Products
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               <li>
                 <a
-                  href="/about"
-                  className="hover:text-green-500 dark:hover:text-green-400 transition duration-300"
+                  href="/products/pickles"
+                  className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
                 >
-                  About Us
+                  Traditional Pickles
                 </a>
               </li>
               <li>
                 <a
-                  href="/products"
-                  className="hover:text-green-500 dark:hover:text-green-400 transition duration-300"
+                  href="/products/flour"
+                  className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
                 >
-                  Our Products
+                  Premium Flour Products
                 </a>
               </li>
               <li>
                 <a
-                  href="/advantages"
-                  className="hover:text-green-500 dark:hover:text-green-400 transition duration-300"
+                  href="/products/veg"
+                  className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
                 >
-                  Health Benefits
+                  Vegetarian Specialties
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/products/non-veg"
+                  className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
+                >
+                  Non-Veg Delicacies
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/products/spices"
+                  className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
+                >
+                  Spice Blends
                 </a>
               </li>
             </ul>
           </div>
 
+          {/* Quick Links */}
           <div className="text-center md:text-left">
-            <h3 className="text-xl font-semibold mb-4 text-green-700 dark:text-green-300">
-              Connect With Us
+            <h3 className="text-lg font-bold mb-6 text-amber-800 dark:text-amber-200">
+              Quick Links
             </h3>
-            <div className="flex justify-center md:justify-start space-x-4 mb-4">
+            <ul className="space-y-3">
+              <li>
+                <a
+                  href="/about"
+                  className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
+                >
+                  Our Story
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/quality"
+                  className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
+                >
+                  Quality Assurance
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/recipes"
+                  className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
+                >
+                  Recipe Blog
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/wholesale"
+                  className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
+                >
+                  Wholesale Inquiries
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/career"
+                  className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
+                >
+                  Careers
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Information */}
+          <div className="text-center md:text-left">
+            <h3 className="text-lg font-bold mb-6 text-amber-800 dark:text-amber-200">
+              Contact Us
+            </h3>
+            <div className="space-y-4">
+              <div className="flex items-center justify-center md:justify-start gap-3">
+                <MapPin className="h-5 w-5 text-amber-700 dark:text-amber-300" />
+                <p className="text-sm">Nepalgunj-05, Banke, Nepal</p>
+              </div>
+              <div className="flex items-center justify-center md:justify-start gap-3">
+                <Phone className="h-5 w-5 text-amber-700 dark:text-amber-300" />
+                <p className="text-sm">+977-9801222762</p>
+              </div>
+              <div className="flex items-center justify-center md:justify-start gap-3">
+                <Mail className="h-5 w-5 text-amber-700 dark:text-amber-300" />
+                <a
+                  href="mailto:info@company.com"
+                  className="text-sm hover:text-amber-600 dark:hover:text-amber-300"
+                >
+                  info@company.com
+                </a>
+              </div>
+              <div className="flex items-center justify-center md:justify-start gap-3">
+                <Clock className="h-5 w-5 text-amber-700 dark:text-amber-300" />
+                <p className="text-sm">Mon - Sat: 9:00 AM - 6:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        {/* <div className="mt-16 pt-8 border-t border-amber-200 dark:border-amber-800">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <p className="text-sm text-amber-800 dark:text-amber-200">
+              © 2024 Technopoets.pvt.ltd . All rights reserved.
+            </p>
+            <div className="flex space-x-6 text-sm">
               <a
-                href="https://www.facebook.com/regronepal"
-                className="text-green-600 hover:text-green-400 dark:text-green-300 dark:hover:text-green-100 transition duration-300"
-                aria-label="Facebook"
+                href="/privacy"
+                className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
               >
-                <Facebook className="h-6 w-6" />
+                Privacy Policy
               </a>
               <a
-                href="https://www.instagram.com/regronepal"
-                className="text-green-600 hover:text-green-400 dark:text-green-300 dark:hover:text-green-100 transition duration-300"
-                aria-label="Instagram"
+                href="/terms"
+                className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
               >
-                <Instagram className="h-6 w-6" />
+                Terms of Service
               </a>
               <a
-                href="https://www.youtube.com/regronepal"
-                className="text-green-600 hover:text-green-400 dark:text-green-300 dark:hover:text-green-100 transition duration-300"
-                aria-label="YouTube"
+                href="/sitemap"
+                className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
               >
-                <Youtube className="h-6 w-6" />
+                Sitemap
               </a>
             </div>
-            <p className="mt-4">
-              Email:{" "}
-              <a
-                href="mailto:contact@rafisnepal.com"
-                className="hover:underline text-green-600 dark:text-green-300"
-              >
-                contact@rafisnepal.com
-              </a>
-            </p>
-            <p className="text-green-700 dark:text-green-200">
-              Phone: +977-9801222762, +977-9801222763
-            </p>
-            <p className="mt-2 text-green-700 dark:text-green-200">
-              Address: Nepalgunj-05, Banke, Nepal
-            </p>
-            <p>
-              Website:{" "}
-              <a
-                href="https://www.rafisnepal.com"
-                className="hover:underline text-green-600 dark:text-green-300"
-              >
-                www.rafisnepal.com
-              </a>
-            </p>
           </div>
-        </div>
-        <div className="mt-12 pt-8 border-t border-green-200 dark:border-green-700 text-center">
-          <p className="text-green-700 dark:text-green-200">
-            &copy; 2024 Regmi Agro & Food Industries Pvt. Ltd. (regro). All
-            rights reserved.
-          </p>
-          <div className="text-sm mt-2 text-green-600 dark:text-green-300 ">
-            Technical Partner:
-            <a
-              href="https://technopoets.com/"
-              className="hover:underline cursor-pointer"
-            >
-              {" "}
-              TechnoPoets Pvt. Ltd.
-            </a>
-          </div>
-        </div>
+        </div> */}
       </div>
     </footer>
   );
