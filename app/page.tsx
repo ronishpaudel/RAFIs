@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { ProblemsSection } from "@/components/ProblemSection";
 import Products from "@/components/ProductSection";
+import ScrollToTopButton from "@/components/ScrollTop";
 import Testimonials from "@/components/Testimonial";
 import { WhyChooseRegro } from "@/components/WhyChooseRegro";
 import React from "react";
@@ -22,6 +23,7 @@ const Page = () => {
       <WhyChooseRegro />
       <Testimonials />
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 };
