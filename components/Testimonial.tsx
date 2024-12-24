@@ -1,91 +1,160 @@
+import React from "react";
 import Image from "next/image";
-import { Star, StarHalf, Star as StarOutline } from "lucide-react";
+import { Star, StarHalf, StarIcon as StarOutline, Quote } from "lucide-react";
+import { motion } from "framer-motion";
 
-export default function Testimonials() {
-  const testimonials = [
-    {
-      name: "आरव शर्मा",
-      image: "/static/img/batman.webp",
-      text: "मैले मेरो बेकिंग आवश्यकताहरुको लागि RAFIs को पिठो प्रयोग गरिरहेको छु, र परिणामहरू अचम्मको छन्! गुणस्तर असाधारण छ, र मलाई मेरो परिवारको लागि स्वस्थ उत्पादन प्रयोग गरिरहेको थाहा पाउँदा खुशी लाग्छ।",
-      rating: 4.5,
-    },
-    {
-      name: "प्रिया पटेल",
-      image: "/static/img/batman.webp",
-      text: "RAFIs को अचारहरू एकदम स्वादिष्ट छन्! तिनीहरूले मेरो खानामा उत्तम तीतो स्वाद थप्छन्, र म तिनीहरू प्राकृतिक सामग्रीहरूबाट बनेको कदर गर्दछु। अत्यधिक सिफारिस गरिएको!",
-      rating: 3.5,
-    },
-    {
-      name: "राहुल सिंह",
-      image: "/static/img/batman.webp",
-      text: "RAFIs उत्पादनहरू हाम्रो घरको आवश्यक वस्तुहरू बनिसकेका छन्। पिठोले उत्कृष्ट रोटीहरू बनाउँछ, र अचार उत्तम संगत हो। यो स्वास्थ्यको ख्याल राख्ने स्थानीय व्यवसायलाई समर्थन गर्न उत्कृष्ट हो।",
-      rating: 4,
-    },
-  ];
+interface Testimonial {
+  name: string;
+  location: string;
+  image: string;
+  text: string;
+  rating: number;
+}
 
-  const renderStars = (rating: number) => {
-    const fullStars = Math.floor(rating);
-    const halfStar = rating % 1 >= 0.5;
-    const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
+const testimonials: Testimonial[] = [
+  {
+    name: "Aarav Sharma",
+    location: "Kathmandu",
+    image: "/static/img/batman.webp",
+    text: "The pickles are amazing! Really brings back memories of home-made achar. The quality is fantastic and their mixed vegetable pickle has become a daily staple in our meals.",
+    rating: 5,
+  },
+  {
+    name: "Priya Adhikari",
+    location: "Pokhara",
+    image: "/static/img/batman.webp",
+    text: "Their wheat flour makes the best rotis I've ever made at home. It's so fresh and the texture is perfect. My family loves everything I make with it!",
+    rating: 4.5,
+  },
+  {
+    name: "Bikash Thapa",
+    location: "Lalitpur",
+    image: "/static/img/batman.webp",
+    text: "The chicken pickle is outstanding! Perfect blend of spices and the quality is consistent. Great to see a local company making such premium products.",
+    rating: 5,
+  },
+  {
+    name: "Samiksha Poudel",
+    location: "Bharatpur",
+    image: "/static/img/batman.webp",
+    text: "Their dal ko achar is simply incredible. The taste reminds me of my grandmother's recipe. Very happy to find such authentic flavors.",
+    rating: 5,
+  },
+  {
+    name: "Rajesh Maharjan",
+    location: "Bhaktapur",
+    image: "/static/img/batman.webp",
+    text: "The mango pickle is perfectly balanced - sweet, spicy, and tangy. I appreciate how they maintain traditional tastes while ensuring good quality.",
+    rating: 4.5,
+  },
+  {
+    name: "Anjali Shrestha",
+    location: "Butwal",
+    image: "/static/img/batman.webp",
+    text: "Their atta makes such soft rotis! I love that it's clean and well-packaged. Finally found a flour brand I can trust for my daily cooking.",
+    rating: 5,
+  },
+];
 
-    return (
-      <>
-        {[...Array(fullStars)].map((_, i) => (
-          <Star
-            key={`full-${i}`}
-            className="h-5 w-5 text-yellow-400 fill-current"
-          />
-        ))}
-        {halfStar && (
-          <StarHalf className="h-5 w-5 text-yellow-400 fill-current" />
-        )}
-        {[...Array(emptyStars)].map((_, i) => (
-          <StarOutline
-            key={`empty-${i}`}
-            className="h-5 w-5 text-gray-300 dark:text-gray-600 fill-current"
-          />
-        ))}
-      </>
-    );
-  };
+const renderStars = (rating: number): JSX.Element => {
+  const fullStars = Math.floor(rating);
+  const halfStar = rating % 1 >= 0.5;
+  const emptyStars = 5 - fullStars - (halfStar ? 1 : 0);
 
   return (
-    <section id="testimonials" className="my-6 py-16 bg-gray-100 dark:bg-black">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold mb-6 text-center text-gray-900 dark:text-gray-100">
-          हाम्रा ग्राहकहरूको अनुभव
-        </h2>
-        <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  mx-auto">
-          {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md"
-            >
-              <div className="flex flex-col items-center mb-4">
-                <Image
-                  src={
-                    testimonial.image ||
-                    "https://www.gravatar.com/avatar/ae6e432354d3da4ea712b063bb35f021?d=mp&r=g&s=50"
-                  }
-                  alt={testimonial.name}
-                  width={50}
-                  height={50}
-                  className="rounded-full mb-4"
-                />
-                <div className="text-center">
-                  <h4 className="font-semibold text-gray-900 dark:text-gray-100">
-                    {testimonial.name}
-                  </h4>
-                  <div className="flex justify-center">
-                    {renderStars(testimonial.rating)}
-                  </div>
-                </div>
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 text-center">
-                {testimonial.text}
-              </p>
-            </div>
-          ))}
+    <div className="flex gap-1">
+      {[...Array(fullStars)].map((_, i) => (
+        <Star
+          key={`full-${i}`}
+          className="h-4 w-4 text-yellow-400 fill-yellow-400"
+        />
+      ))}
+      {halfStar && (
+        <StarHalf className="h-4 w-4 text-yellow-400 fill-yellow-400" />
+      )}
+      {[...Array(emptyStars)].map((_, i) => (
+        <StarOutline key={`empty-${i}`} className="h-4 w-4 text-gray-300" />
+      ))}
+    </div>
+  );
+};
+
+const TestimonialCard: React.FC<{ testimonial: Testimonial }> = ({
+  testimonial,
+}) => (
+  <div className="w-[280px] sm:w-[360px] flex-shrink-0 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 flex flex-col">
+    <Quote className="w-8 h-8 text-green-500/30 mb-4 self-start" />
+    <div className="flex items-center mb-4">
+      <div className="relative w-12 h-12 mr-4">
+        <Image
+          src={testimonial.image}
+          alt={testimonial.name}
+          fill
+          className="rounded-full object-cover"
+        />
+      </div>
+      <div>
+        <h4 className="font-semibold text-gray-800">{testimonial.name}</h4>
+        <p className="text-sm text-gray-500">{testimonial.location}</p>
+      </div>
+    </div>
+    <div className="mb-4">{renderStars(testimonial.rating)}</div>
+    <p className="text-gray-600 text-sm leading-relaxed flex-grow overflow-hidden line-clamp-4">
+      {testimonial.text}
+    </p>
+  </div>
+);
+
+const TestimonialRow: React.FC<{
+  testimonials: Testimonial[];
+  direction: "left" | "right";
+}> = ({ testimonials, direction }) => (
+  <div
+    className={`flex gap-6 ${
+      direction === "left" ? "animate-marquee-left" : "animate-marquee-right"
+    }`}
+  >
+    {testimonials.map((testimonial, index) => (
+      <TestimonialCard key={index} testimonial={testimonial} />
+    ))}
+    {testimonials.map((testimonial, index) => (
+      <TestimonialCard key={`duplicate-${index}`} testimonial={testimonial} />
+    ))}
+  </div>
+);
+
+export default function Testimonials(): JSX.Element {
+  return (
+    <section className="py-16 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+      <div className="px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl sm:text-4xl font-playfair font-bold text-gray-800 mb-4">
+            Our Happy Customers
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
+            Join hundreds of satisfied customers enjoying our authentic Nepali
+            flavors
+          </p>
+        </motion.div>
+
+        <div className="overflow-hidden">
+          <div className="mb-8">
+            <TestimonialRow
+              testimonials={testimonials.slice(0, 3)}
+              direction="right"
+            />
+          </div>
+          <div>
+            <TestimonialRow
+              testimonials={testimonials.slice(3)}
+              direction="left"
+            />
+          </div>
         </div>
       </div>
     </section>
