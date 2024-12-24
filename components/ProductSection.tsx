@@ -164,7 +164,7 @@ export default function FeaturedProducts() {
       id="products"
       className="py-16 bg-gray-100 dark:bg-black transition-colors duration-200"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="px-4 sm:px-6 lg:px-12">
         <h2 className="text-3xl font-semibold mb-6 text-gray-800 text-center dark:text-gray-100">
           Featured Products
         </h2>
