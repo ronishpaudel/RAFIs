@@ -5,6 +5,7 @@ import { NavLink } from "./NavLink";
 import { useRouter } from "next/navigation";
 import { MobileMenu } from "./MobileMenu";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ export function Header() {
 
   return (
     <header className="w-full bg-background/80 backdrop-blur-sm border-b sticky top-0 z-50 transition-colors duration-300 ">
-      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
+      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-12 py-4">
         <div className="flex items-center justify-between">
           <div
             className="flex items-center cursor-pointer max-w-[125px] w-full h-20"
@@ -28,8 +29,14 @@ export function Header() {
   dark:brightness-150 dark:drop-shadow-md"
             />
           </div>
-          <nav className="hidden md:flex space-x-6 p-2 rounded-lg text-2xl font-medium">
-            <NavLink href="/about">About</NavLink>
+          <nav className="hidden md:flex space-x-6 p-2 rounded-lg text-2xl ">
+            <Link
+              href="/"
+              className="transition-colors text-lg  font-medium leading-relaxed text-primary hover:text-primary/80 duration-200"
+            >
+              Home
+            </Link>
+
             <div
               className="relative group"
               onMouseEnter={() => setIsProductsOpen(true)}
@@ -65,6 +72,7 @@ export function Header() {
             </div>
             <NavLink href="/terminal">Terminal</NavLink>
             <NavLink href="/advantages">Advantages</NavLink>
+            <NavLink href="/about">About</NavLink>
             <NavLink href="/contact">Contact</NavLink>
           </nav>
           <Button
