@@ -1,28 +1,44 @@
 import React from "react";
 import { ArrowRight, Leaf } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export function HeroSection() {
   return (
     <section className="relative h-screen flex items-center overflow-hidden">
-      {/* Background with enhanced overlay */}
-      <div className="absolute inset-0 bg-cover bg-center heroSection">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+      {/* Background with mobile fallback */}
+      <div className="absolute inset-0 bg-gradient-to-b from-emerald-800 to-teal-900 sm:bg-none">
+        {/* Desktop background image - only loaded on sm: breakpoint and above */}
+        <div className="hidden sm:block absolute inset-0">
+          <Image
+            src="/static/img/banner.webp"
+            alt="Hero background"
+            fill
+            priority
+            quality={90}
+            sizes="100vw"
+            className="object-cover object-center"
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADb/2wBDABQODxIPDRQSEBIXFRQdHx0fHRsdHSIeDR0fIR4hHRsdHR0dISEhHSEhHR0hISEhISEhISEhISEhISEhISEhISH/2wBDARUXFyAeIB4gHiAeICEgISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISEhISH/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
+          />
+        </div>
+
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
       </div>
 
-      {/* Floating decorative elements */}
+      {/* Floating decorative elements - only shown on desktop */}
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.1 }}
+        animate={{ opacity: 0.15 }}
         transition={{ duration: 1 }}
-        className="absolute inset-0 overflow-hidden pointer-events-none"
+        className="absolute inset-0 overflow-hidden pointer-events-none hidden sm:block"
       >
         <div className="absolute top-20 right-20">
-          <Leaf className="w-16 h-16 text-green-300" />
+          <Leaf className="w-16 h-16 text-emerald-300" />
         </div>
         <div className="absolute bottom-20 left-1/4">
-          <Leaf className="w-12 h-12 text-green-300 rotate-45" />
+          <Leaf className="w-12 h-12 text-emerald-300 rotate-45" />
         </div>
       </motion.div>
 
@@ -34,7 +50,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-xs sm:text-sm font-poppins text-green-300 font-medium tracking-wider uppercase "
+            className="text-xs sm:text-sm font-poppins text-emerald-300 font-medium tracking-wider uppercase"
           >
             Welcome to Regro Foods
           </motion.p>
@@ -49,13 +65,12 @@ export function HeroSection() {
             Eat Healthy,{" "}
             <span className="block mt-2">
               Stay{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-green-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-300 to-emerald-400">
                 Healthy
               </span>
             </span>
           </motion.h1>
 
-          {/* Animated description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -66,7 +81,6 @@ export function HeroSection() {
             provide premium ingredients and sustainable agricultural solutions.
           </motion.p>
 
-          {/* Animated buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -76,11 +90,11 @@ export function HeroSection() {
             <a
               href="/products"
               className="group inline-flex items-center px-6 py-3 rounded-lg 
-                       bg-gradient-to-r from-green-500 to-green-600
+                       bg-gradient-to-r from-emerald-500 via-emerald-600 to-teal-600
                        text-white font-poppins text-sm sm:text-base font-semibold
                        transition-all duration-300 
-                       shadow-lg hover:shadow-xl hover:scale-105
-                       hover:from-green-600 hover:to-green-700"
+                       shadow-lg shadow-emerald-500/20 hover:shadow-xl hover:shadow-emerald-500/30 hover:scale-105
+                       hover:from-emerald-600 hover:via-emerald-700 hover:to-teal-700"
             >
               Explore Our Products
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -92,7 +106,8 @@ export function HeroSection() {
                        bg-white/10 backdrop-blur-sm
                        text-white font-poppins text-sm sm:text-base font-semibold
                        transition-all duration-300 
-                       hover:bg-white/20 hover:scale-105"
+                       hover:bg-white/20 hover:scale-105
+                       border border-white/20 hover:border-white/30"
             >
               Learn More
             </a>
@@ -103,7 +118,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-8 border-t border-white/10"
+            className="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-8 border-t border-emerald-500/20"
           >
             {[
               { value: "100%", label: "Locally Sourced Ingredients" },
@@ -111,7 +126,7 @@ export function HeroSection() {
               { value: "Fresh", label: "Handcrafted in Small Batches" },
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-xl sm:text-2xl font-bold text-white mb-1">
+                <div className="text-xl sm:text-2xl font-bold text-emerald-300 mb-1">
                   {stat.value}
                 </div>
                 <div className="text-xs sm:text-sm text-gray-300">
@@ -135,9 +150,9 @@ export function HeroSection() {
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1 h-6 rounded-full bg-white/20"
+            className="w-1 h-6 rounded-full bg-emerald-500/20"
           >
-            <div className="w-full h-1/2 bg-white/70 rounded-full" />
+            <div className="w-full h-1/2 bg-emerald-400/70 rounded-full" />
           </motion.div>
         </div>
       </motion.div>
