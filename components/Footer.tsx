@@ -72,7 +72,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/products/veg"
+                  href="/products"
                   className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
                 >
                   Vegetarian Specialties
@@ -80,18 +80,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/products/non-veg"
+                  href="/products/pickles"
                   className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
                 >
                   Non-Veg Delicacies
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/products/spices"
-                  className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
-                >
-                  Spice Blends
                 </a>
               </li>
             </ul>
@@ -113,34 +105,19 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="/quality"
+                  href="/terminal"
                   className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
                 >
                   Quality Assurance
                 </a>
               </li>
+
               <li>
                 <a
-                  href="/recipes"
-                  className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
-                >
-                  Recipe Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/wholesale"
+                  href="/contact"
                   className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
                 >
                   Wholesale Inquiries
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/career"
-                  className="hover:text-amber-600 dark:hover:text-amber-300 transition-colors"
-                >
-                  Careers
                 </a>
               </li>
             </ul>
