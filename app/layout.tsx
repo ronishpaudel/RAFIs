@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   description:
     "Regro's offers quality food products and agricultural services in Nepalgunj, Nepal. We focus on healthy living, community well-being, and sustainable practices.",
   keywords: [
-    "RAFIs",
+    "Regro",
     "Regro",
     "Nepalgunj",
     "quality food",
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
     "sustainable practices",
     "community well-being",
   ],
-  authors: [{ name: "RAFIs" }],
-  creator: "RAFIs",
-  publisher: "RAFIs",
+  authors: [{ name: "Regro" }],
+  creator: "Regro",
+  publisher: "Regro",
   formatDetection: {
     email: false,
     address: false,
@@ -47,10 +47,10 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.rafis.com/",
-    siteName: "RAFIs",
-    title: "RAFIs - Quality Food Products & Sustainable Agriculture",
+    siteName: "Regro",
+    title: "Regro - Quality Food Products & Sustainable Agriculture",
     description:
-      "Discover RAFIs (Regro) in Nepalgunj: Your source for quality food products and agricultural services. Join us in promoting healthy living and community well-being.",
+      "Discover Regro in Nepalgunj: Your source for quality food products and agricultural services. Join us in promoting healthy living and community well-being.",
   },
 
   viewport: {
