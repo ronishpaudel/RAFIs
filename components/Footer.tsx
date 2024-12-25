@@ -28,22 +28,22 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4 mt-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/regronepal"
                 className="text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-100 transition-colors"
               >
                 <Facebook className="h-6 w-6" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/regronepal"
                 className="text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-100 transition-colors"
               >
                 <Instagram className="h-6 w-6" />
               </a>
               <a
-                href="https://youtube.com"
+                href="mailto:contact@rafisnepal.com"
                 className="text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-100 transition-colors"
               >
-                <Youtube className="h-6 w-6" />
+                <Mail className="h-6 w-6" />
               </a>
             </div>
           </div>
@@ -135,15 +135,15 @@ export default function Footer() {
               </div>
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <Phone className="h-5 w-5 text-amber-700 dark:text-amber-300" />
-                <p className="text-sm">+977-9801222762</p>
+                <p className="text-sm">+977-9801222761</p>
               </div>
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <Mail className="h-5 w-5 text-amber-700 dark:text-amber-300" />
                 <a
-                  href="mailto:info@company.com"
+                  href="mailto:contact@rafisnepal.com"
                   className="text-sm hover:text-amber-600 dark:hover:text-amber-300"
                 >
-                  info@company.com
+                  contact@rafisnepal.com
                 </a>
               </div>
               <div className="flex items-center justify-center md:justify-start gap-3">
