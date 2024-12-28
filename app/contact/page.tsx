@@ -121,10 +121,10 @@ export default function ContactPage() {
               <div className="flex items-center space-x-2">
                 <Mail className="w-5 h-5 text-gray-600 dark:text-gray-400" />
                 <a
-                  href="mailto:contact@rafisnepal.com"
+                  href="mailto:contact@regronepal.com"
                   className="text-blue-600 dark:text-blue-400 hover:underline"
                 >
-                  contact@rafisnepal.com
+                  contact@regronepal.com
                 </a>
               </div>
               <div className="pt-4">
@@ -139,7 +139,7 @@ export default function ContactPage() {
                     className="flex items-center space-x-2"
                   >
                     <Facebook className="w-6 h-6 text-blue-600 hover:text-blue-700" />
-                    <p>Regmi Agro and Food Industries Pvt. Ltd. - RAFIs</p>
+                    <p>Regmi Agro and Food Industries Pvt. Ltd. - Regro</p>
                   </a>
                   <a
                     href="https://instagram.com/regronepal"
@@ -151,7 +151,7 @@ export default function ContactPage() {
                     <p>regronepal</p>
                   </a>
                   <a
-                    href="mailto:contact@rafisnepal.com"
+                    href="mailto:contact@regronepal.com"
                     className="flex items-center space-x-2 pb-2"
                   >
                     <MailIcon className="w-6 h-6 text-blue-600 hover:text-blue-700" />

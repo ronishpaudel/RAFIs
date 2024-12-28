@@ -50,9 +50,9 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-xs sm:text-sm font-poppins text-emerald-300 font-medium tracking-wider uppercase"
+            className="text-xs sm:text-sm font-poppins text-emerald-300 font-medium tracking-wider "
           >
-            Welcome to Regro Foods
+            Welcome to Regmi Agro & Foods
           </motion.p>
 
           {/* Animated heading */}

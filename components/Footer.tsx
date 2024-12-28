@@ -40,7 +40,7 @@ export default function Footer() {
                 <Instagram className="h-6 w-6" />
               </a>
               <a
-                href="mailto:contact@rafisnepal.com"
+                href="mailto:contact@regronepal.com"
                 className="text-amber-700 hover:text-amber-500 dark:text-amber-300 dark:hover:text-amber-100 transition-colors"
               >
                 <Mail className="h-6 w-6" />
@@ -140,10 +140,10 @@ export default function Footer() {
               <div className="flex items-center justify-center md:justify-start gap-3">
                 <Mail className="h-5 w-5 text-amber-700 dark:text-amber-300" />
                 <a
-                  href="mailto:contact@rafisnepal.com"
+                  href="mailto:contact@regronepal.com"
                   className="text-sm hover:text-amber-600 dark:hover:text-amber-300"
                 >
-                  contact@rafisnepal.com
+                  contact@regronepal.com
                 </a>
               </div>
               <div className="flex items-center justify-center md:justify-start gap-3">
