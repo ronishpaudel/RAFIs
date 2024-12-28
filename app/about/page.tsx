@@ -44,7 +44,7 @@ const AboutPage: React.FC = () => {
           </h1>
           <div className="mb-12 relative h-64 sm:h-96 rounded-lg overflow-hidden">
             <ImageWithPlaceholder
-              src=""
+              src="/static/img/banner2.jpg"
               alt="People working happily at Regro"
               fill
               className="object-cover"
@@ -97,10 +97,10 @@ const AboutPage: React.FC = () => {
               </CardContent>
             </Card>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <div className="relative h-40 rounded-lg overflow-hidden">
               <ImageWithPlaceholder
-                src=""
+                src="/static/img/karela-achar.jpg"
                 alt="People working happily at Regro"
                 fill
                 className="object-cover"
@@ -108,7 +108,7 @@ const AboutPage: React.FC = () => {
             </div>
             <div className="relative h-40 rounded-lg overflow-hidden">
               <ImageWithPlaceholder
-                src=""
+                src="/static/img/pea.png"
                 alt="Regro products display"
                 fill
                 className="object-cover"
@@ -116,7 +116,7 @@ const AboutPage: React.FC = () => {
             </div>
             <div className="relative h-40 rounded-lg overflow-hidden">
               <ImageWithPlaceholder
-                src=""
+                src="/static/img/chicken.png"
                 alt="Regro agricultural involvement"
                 fill
                 className="object-cover"
@@ -146,7 +146,7 @@ const AboutPage: React.FC = () => {
                 className="object-cover"
               />
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
       <Footer />

@@ -32,8 +32,9 @@ const features = [
 export function WhyChooseRegro() {
   return (
     <section className="relative flex flex-col lg:flex-row items-stretch min-h-screen bg-green-50">
-      <div className="relative z-20 flex items-center justify-center w-full lg:w-1/2">
-        <div className="w-full max-w-xl ">
+      {/* Text section */}
+      <div className="relative z-20 flex items-center justify-center w-full lg:w-1/2 p-4 sm:p-6 lg:p-12">
+        <div className="w-full max-w-xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
