@@ -70,7 +70,7 @@ export function Header() {
                 )}
               </AnimatePresence>
             </div>
-            <NavLink href="/terminal">Terminal</NavLink>
+            {/* <NavLink href="/terminal">Terminal</NavLink> */}
             <NavLink href="/advantages">Advantages</NavLink>
             <NavLink href="/about">About</NavLink>
             <NavLink href="/contact">Contact</NavLink>

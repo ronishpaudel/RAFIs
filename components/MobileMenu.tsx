@@ -29,7 +29,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
   const menuItems: string[] = [
     "About",
     "Products",
-    "Terminal",
+    // "Terminal",
     "Advantages",
     "Contact",
   ];
