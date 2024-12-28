@@ -20,24 +20,32 @@ const libreBaskerville = Libre_Baskerville({
 
 export const metadata: Metadata = {
   title: {
-    default: "Regro's - Quality Food Products & Agriculture in Nepalgunj",
-    template: "%s | RAFIs",
+    default:
+      "Regro - Eat Healthy, Stay Healthy | Quality Food Products & Agriculture in Nepalgunj",
+    template: "%s | Regro Nepal",
   },
   description:
-    "Regro's offers quality food products and agricultural services in Nepalgunj, Nepal. We focus on healthy living, community well-being, and sustainable practices.",
+    "Regro (Regmi Agro & Food Industries Pvt. Ltd.) offers quality, hygienic, and nutritious food products in Nepalgunj, Nepal. Our motto: Eat Healthy, Stay Healthy. We focus on sustainable practices, innovative solutions, and community well-being.",
   keywords: [
     "Regro",
-    "Regro",
+    "Regro Nepal",
+    "Regmi Agro & Food Industries",
     "Nepalgunj",
     "quality food",
     "agriculture",
     "healthy living",
     "sustainable practices",
     "community well-being",
+    "hygienic food",
+    "nutritious food",
+    "affordable food",
+    "Nepali food products",
+    "Eat Healthy Stay Healthy",
+    "Regro np",
   ],
   authors: [{ name: "Regro" }],
   creator: "Regro",
-  publisher: "Regro",
+  publisher: "Regmi Agro & Food Industries Pvt. Ltd.",
   formatDetection: {
     email: false,
     address: false,
@@ -46,13 +54,28 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.rafis.com/",
-    siteName: "Regro",
-    title: "Regro - Quality Food Products & Sustainable Agriculture",
+    url: "https://www.regro.com.np/",
+    siteName: "Regro Nepal",
+    title:
+      "Regro Nepal - Eat Healthy, Stay Healthy | Quality Food Products & Sustainable Agriculture",
     description:
-      "Discover Regro in Nepalgunj: Your source for quality food products and agricultural services. Join us in promoting healthy living and community well-being.",
+      "Discover Regro in Nepalgunj: Your source for hygienic, nutritious, and affordable food products. We're dedicated to promoting healthy living and community well-being through sustainable practices and innovative solutions.",
+    images: [
+      {
+        url: "https://www.regro.com.np/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Regro - Eat Healthy, Stay Healthy",
+      },
+    ],
   },
-
+  twitter: {
+    card: "summary_large_image",
+    title: "Regro Nepal - Eat Healthy, Stay Healthy",
+    description:
+      "Quality, hygienic, and nutritious food products from Nepalgunj, Nepal.",
+    images: ["https://www.regro.com.np/twitter-image.jpg"],
+  },
   viewport: {
     width: "device-width",
     initialScale: 1,
@@ -87,10 +110,23 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${poppins.variable}${inter.variable} ${playfair.variable} ${libreBaskerville.variable}`}
+      className={`${poppins.variable} ${inter.variable} ${playfair.variable} ${libreBaskerville.variable}`}
     >
+      <head>
+        <link rel="canonical" href="https://www.regro.com.np/" />
+        <meta name="theme-color" content="#4CAF50" />
+      </head>
       <body className={poppins.className}>
-        {children}
+        <header>
+          <h1 className="sr-only">Regro Nepal - Eat Healthy, Stay Healthy</h1>
+        </header>
+        <main>{children}</main>
+        <footer>
+          <p className="sr-only">
+            Regro (Regmi Agro & Food Industries Pvt. Ltd.) - Providing quality,
+            hygienic, and nutritious food products in Nepalgunj, Nepal.
+          </p>
+        </footer>
         <Analytics />
       </body>
     </html>
