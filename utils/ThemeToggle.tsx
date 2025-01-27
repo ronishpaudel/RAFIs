@@ -11,11 +11,11 @@ export function ModeToggle() {
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
-    setMounted(true)
+    setMounted(true);
   }, []);
 
   if (!mounted) {
-    return null
+    return null;
   }
 
   const toggleTheme = () => {
