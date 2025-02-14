@@ -40,6 +40,5 @@ Connect with us on social media:
 
 - **Facebook**: [regronepal](https://www.facebook.com/regronepal)
 - **Instagram**: [regronepal](https://www.instagram.com/regronepal)
-- **Twitter**: [regronepal](https://twitter.com/regronepal)
 
 Thank you for choosing Regro. Together, let's shop healthy and stay happy
